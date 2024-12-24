@@ -2,14 +2,14 @@
 <html>
   <h1 id="a">0</h1>
   <button onclick="ye()">Increment</button>
-  <button onclick="upgrade()"></button>
+  <button id="up" onclick="upgrade()">upgrade</button>
 </html>
 
 <script>
-  var ele = document.getElementById('a');  // Correct the method
-  var amount = parseInt(ele.innerHTML);    // Convert innerHTML to an integer
+  var ele = document.getElementById('a');
+  var amount = parseInt(ele.innerHTML);
   var plus = 1
-  
+  document.getElementById('up').InnerHTML = "upgrade ($10)"
   function ye() {
     amount += plus;
     ele.innerHTML = amount;

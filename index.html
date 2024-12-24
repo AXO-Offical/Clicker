@@ -1,12 +1,20 @@
-<!doctypehtml>
+<!DOCTYPE html>
 <html>
   <h1 id="a">0</h1>
-  <button onclick="ye()"></button>
+  <button onclick="ye()">Increment</button>
 </html>
+
 <script>
-  var ele = document.GetElementById('a');
-  var amount = ele.InnerHTML;
+  var ele = document.getElementById('a');  // Correct the method
+  var amount = parseInt(ele.innerHTML);    // Convert innerHTML to an integer
+  var plus = 1
+  
   function ye() {
-    ++amount;
+    amount += plus;
+    ele.innerHTML = amount;
+  }
+
+  function upgrade() {
+    plus += 1;
   }
 </script>

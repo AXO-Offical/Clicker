@@ -24,7 +24,7 @@
     <button class="mainButtonTag" onclick="ye()"></button>
     <br>
     <button class="buttonTag" id="up" onclick="upgrade()">upgrade</button>
-    <button class="buttonTag id="auto" onclick="automatic_click_upgrade()">autoclick ($1000)</button>
+    <button class="buttonTag" id="auto" onclick="automatic_click_upgrade()">autoclick ($1000)</button>
   </body>
 </html>
 
@@ -35,7 +35,7 @@
   var cost = 10;
   var boughtA = false // A
   document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")";
-  //amount = 0 - for testing
+  //amount = 0 - just for testing
   function ye() {
     amount += plus;
     ele.innerHTML = amount;
@@ -59,8 +59,8 @@
         ele.innerHTML = amount;
         document.getElementById('auto').innerHTML = "BOUGHT";
         setInterval(function() {amount += 1;}, 100);
+      }
     }
-   }
   }
   setInterval(function() {ele.innerHTML = amount;}, 10);
 </script>

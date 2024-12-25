@@ -9,13 +9,20 @@
   var ele = document.getElementById('a');
   var amount = parseInt(ele.innerHTML);
   var plus = 1
-  document.getElementById('up').innerHTML = "upgrade ($10)"
+  var cost = 10
+  document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")"
   function ye() {
     amount += plus;
     ele.innerHTML = amount;
   }
-
+  
   function upgrade() {
-    plus += 1;
+    if (amount >= cost) {
+      amount -= 10
+      plus += 1;
+      cost = cost * 5
+      ele.innerHTML = amount;
+      document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")"
+  }
   }
 </script>

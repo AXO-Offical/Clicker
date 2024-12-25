@@ -3,26 +3,42 @@
   <h1 id="a">0</h1>
   <button onclick="ye()">Increment</button>
   <button id="up" onclick="upgrade()">upgrade</button>
+  <button id="auto" onclick="automatic_click_upgrade()">autoclick</button>
 </html>
 
 <script>
   var ele = document.getElementById('a');
   var amount = parseInt(ele.innerHTML);
-  var plus = 1
-  var cost = 10
-  document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")"
+  var plus = 1;
+  var cost = 10;
+  var boughtA = false // A
+  document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")";
+  //amount = 0 - for testing
   function ye() {
     amount += plus;
     ele.innerHTML = amount;
   }
-  
+
   function upgrade() {
     if (amount >= cost) {
-      amount -= 10
+      amount -= cost;
       plus += 1;
-      cost = cost * 5
+      cost = cost * 5;
       ele.innerHTML = amount;
-      document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")"
+      document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")";
+    }
   }
+  
+  function automatic_click_upgrade() { // A
+   if (boughtA == false) {
+      if (amount >= 1000) {
+        boughtA = true
+        amount -= 1000;
+        ele.innerHTML = amount;
+        document.getElementById('auto').innerHTML = "BOUGHT";
+        setInterval(function() {amount += 1;}, 100);
+    }
+   }
   }
+  setInterval(function() {ele.innerHTML = amount;}, 10);
 </script>

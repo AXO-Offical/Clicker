@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <style>
-  buttonTag {
-    background: none;
-    border: none;
-    outline: none;
-    box-shadow: none;
+  .buttonTag {
     border: 2px solid black;
     border-radius: 0px;
+    color: black;
   }
   body {
     color: red;
   }
 </style>
 <html>
-  <h1 id="a">0</h1>
-  <buttonTag>
-  <button onclick="ye()">Increment</button>
-  </buttonTag>
-  <button id="up" onclick="upgrade()">upgrade</button>
-  <button id="auto" onclick="automatic_click_upgrade()">autoclick ($1000)</button>
+  <body>
+    <h1 id="a">0</h1>
+    <button type="buttonTag" class="buttonTag" onclick="ye()">Increment</button>
+    <button id="up" onclick="upgrade()">upgrade</button>
+    <button id="auto" onclick="automatic_click_upgrade()">autoclick ($1000)</button>
+  </body>
 </html>
 
 <script>

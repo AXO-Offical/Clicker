@@ -36,7 +36,9 @@
 <script>
   var ele = document.getElementById('a');
   var amount = parseInt(ele.innerHTML);
-  amount = localStorage.getItem("amount");
+  if (localStorage.getItem("amount")) != nil {
+    amount = localStorage.getItem("amount");
+  }
   var plus = 1;
   var cost = 10;
   var boughtA = false // A

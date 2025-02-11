@@ -79,7 +79,7 @@
     plus = parseInt(localStorage.getItem("plus"));
     cost = 10 * 5 ** (plus - 1)
     document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")";
-    if (localStorage.getItem("amount") == true) {
+    if (localStorage.getItem("boughtA") == true) {
       boughtA = true
       ele.innerHTML = amount;
       document.getElementById('auto').innerHTML = "BOUGHT";

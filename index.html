@@ -35,6 +35,7 @@
 
 <script>
   var ele = document.getElementById('a');
+  //ele.innerHTML = localStorage.getItem("amount");
   var amount = parseInt(ele.innerHTML);
   var plus = 1;
   var cost = 10;
@@ -68,7 +69,7 @@
     }
   }
   function save() {
-    localStorage.setItem("amount", amount);
+    localStorage.setItem("amount", String(amount);
   }
   setInterval(function() {ele.innerHTML = amount;}, 10);
 </script>

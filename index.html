@@ -71,9 +71,13 @@
   
   function save() {
     localStorage.setItem("amount", amount);
+    localStorage.setItem("plus", plus);
   }
   function load() {
     amount = parseInt(localStorage.getItem("amount"));
+    plus = parseInt(localStorage.getItem("plus"));
+    cost = 10 * plus * 5
+    document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")";
   }
   setInterval(function() {ele.innerHTML = amount;}, 10);
 </script>

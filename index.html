@@ -72,12 +72,18 @@
   function save() {
     localStorage.setItem("amount", amount);
     localStorage.setItem("plus", plus);
+    localStorage.setItem("boughtA", boughtA);
   }
   function load() {
     amount = parseInt(localStorage.getItem("amount"));
     plus = parseInt(localStorage.getItem("plus"));
     cost = 10 * 5 ** (plus - 1)
     document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")";
+    if (localStorage.getItem("amount") == true) {
+      ele.innerHTML = amount;
+      document.getElementById('auto').innerHTML = "BOUGHT";
+      setInterval(function() {amount += 1;}, 100);
+    }
   }
   setInterval(function() {ele.innerHTML = amount;}, 10);
 </script>

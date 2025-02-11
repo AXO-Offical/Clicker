@@ -35,10 +35,10 @@
 
 <script>
   var ele = document.getElementById('a');
-  var amount = parseInt(ele.innerHTML);
   if (localStorage.getItem("amount")) != nil {
-    amount = localStorage.getItem("amount");
+    document.getElementById('a').innerHTML = = localStorage.getItem("amount");
   }
+  var amount = parseInt(ele.innerHTML);
   var plus = 1;
   var cost = 10;
   var boughtA = false // A

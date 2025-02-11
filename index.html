@@ -30,15 +30,13 @@
     <button class="buttonTag" id="up" onclick="upgrade()">upgrade</button>
     <button class="buttonTag" id="auto" onclick="automatic_click_upgrade()">autoclick ($1000)</button>
     <button class="buttonTag" id="saveB" onclick="save()">save</button>
+    <button class="buttonTag" id="loadB" onclick="load()">load</button>
   </body>
 </html>
 
 <script>
   var ele = document.getElementById('a');
   var amount = parseInt(ele.innerHTML);
-  if (localStorage.getItem("amount")) {
-    amount = parseInt(localStorage.getItem("amount"));
-  }
   var plus = 1;
   var cost = 10;
   var boughtA = false; // A
@@ -73,6 +71,9 @@
   
   function save() {
     localStorage.setItem("amount", amount);
+  }
+  function load() {
+    amount = parseInt(localStorage.getItem("amount"));
   }
   setInterval(function() {ele.innerHTML = amount;}, 10);
 </script>

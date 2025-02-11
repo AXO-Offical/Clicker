@@ -76,7 +76,7 @@
   function load() {
     amount = parseInt(localStorage.getItem("amount"));
     plus = parseInt(localStorage.getItem("plus"));
-    cost = plus * 5 + 5
+    cost = 10 * 5 ** (plus - 1)
     document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")";
   }
   setInterval(function() {ele.innerHTML = amount;}, 10);

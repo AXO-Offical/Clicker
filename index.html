@@ -35,12 +35,12 @@
 </html>
 
 <script>
-  var ele = document.getElementById('a');
+  var ele = document.getElementById("a");
   var amount = parseInt(ele.innerHTML);
   var plus = 1;
   var cost = 10;
   var boughtA = false; // A
-  document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")";
+  document.getElementById("up").innerHTML = "upgrade ($" + String(cost) + ")";
   //amount = 0 - just for testing
   function ye() {
     amount += plus;
@@ -53,7 +53,7 @@
       plus += 1;
       cost = cost * 5;
       ele.innerHTML = amount;
-      document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")";
+      document.getElementById("up").innerHTML = "upgrade ($" + String(cost) + ")";
     }
   }
   
@@ -63,7 +63,7 @@
         boughtA = true
         amount -= 1000;
         ele.innerHTML = amount;
-        document.getElementById('auto').innerHTML = "BOUGHT";
+        document.getElementById("auto").innerHTML = "BOUGHT";
         setInterval(function() {amount += 1;}, 100);
       }
     }
@@ -78,11 +78,11 @@
     amount = parseInt(localStorage.getItem("amount"));
     plus = parseInt(localStorage.getItem("plus"));
     cost = 10 * 5 ** (plus - 1)
-    document.getElementById('up').innerHTML = "upgrade ($" + String(cost) + ")";
+    document.getElementById("up").innerHTML = "upgrade ($" + String(cost) + ")";
     if (localStorage.getItem("boughtA") == "true" && boughtA == false) {
       boughtA = true;
       ele.innerHTML = amount;
-      document.getElementById('auto').innerHTML = "BOUGHT";
+      document.getElementById("auto").innerHTML = "BOUGHT";
       setInterval(function() {amount += 1;}, 100);
     }
   }
